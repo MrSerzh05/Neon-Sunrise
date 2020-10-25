@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru-RU" class="blurback">
+     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+        <title>Neon Sunrise / СКФУ</title>
+        <meta name="description" content="вакансии и поиск работы для студентов СКФУ" />
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <link rel="canonical" href="https://cyberhealth.pythonanywhere.com/example1/" />
+        <meta property="og:locale" content="ru_RU" /><meta property="og:locale:alternate" content="en_GB" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Neon Sunrise / СКФУ" />
+        <meta property="og:description" content="вакансии и поиск работы для студентов СКФУ" />
+        <meta property="og:url" content="https://cyberhealth.pythonanywhere.com/example1/" />
+        <meta property="og:site_name" content="Neon Sunrise / СКФУ" />
+        <meta property="article:modified_time" content="2020-08-06T21:25:28+00:00" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:300,400,700&amp;subset=latin,cyrillic-ext,latin-ext,cyrillic" rel="stylesheet" type="text/css">
+        <script src="{% static 'javascript/jquery.js' %}"></script>
+    </head>
+    <body>
+        <div id="maincont">
+            <div class="menu_container">
+                <ul>
+                    <li> <a href="/signup">ВХОД</a> </li>
+                    <li> <a href="/services/">Вакансии</a> </li>
+                    <li> <a href="/tech/">Мероприятия</a> </li>
+                    <li> <a href="/contacts/">Пусто</a> </li>
+                </ul>
+                <img id="imglog1" src="{% static 'images/log2.png' %}" />
+            </div>
+            <div id="mainc">
+                <div id="bubcont">
+                    <div id="bubble_1">
+                        <div id="bubdiv">
+                            <div class="bubdiv2">
+        	                    <h2>ВХОД</h2>
+                        	</div>
+                        </div>
+                    </div>
+                    <div id="bubble_5">
+
+                    </div>
+                    <div id="bubble_2">
+                        <div id="bubdiv">
+                            <div class="bubdiv2">
+        	                    <h2>ВАКАНСИИ</h2>
+                            	<p>для студентов скфу</p>
+                        	</div>
+                        </div>
+                        <a href="/about/"></a>
+                    </div>
+                    <div id="bubble_3">
+                        <div id="bubdiv">
+                            <div class="bubdiv2">
+        	                    <h1>Мероприятия</h1>
+                        	</div>
+                        </div>
+                    </div>
+                    <div id="bubble_4">
+                        <!--div id="bubdiv">
+                            <div class="bubdiv3">
+        	                    <h1>NS</h1>
+                        	</div>
+                        </div-->
+                    </div>
+                    <div id="bubble_6">
+
+                    </div>
+                    <div id="bubble_7">
+                        <img  id = "imglog" src="{% static 'images/log2.png' %}" />
+                    </div>
+                </div>
+                <img id = "img1" src="{% static 'images/anypi.jpg' %}" />
+                <div id="stcont">
+                    <img id = "img2" src="{% static 'images/stars11.png' %}" />
+                    <img id = "img3" src="{% static 'images/stars22.png' %}" />
+                    <img id = "img4" src="{% static 'images/stars33.png' %}" />
+                </div>
+                <div id="r_but" onclick="butr()">
+                    <img id = "imgrb" src="{% static 'images/right_non.png' %}"/>
+                </div>
+                <div id="l_but" onclick="butl()">
+                    <img id = "imglb" src="{% static 'images/left_non.png' %}" />
+                </div>
+            </div>
+
+            <div class="footer">
+                <ul>
+                    <li> Пусто </li>
+                    <li> Пусто </li>
+                    <li> <p><strong>Пусто</strong></p> </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            var bub1 = document.getElementById('bubble_1');
+            var bubcont = document.getElementById('bubcont');
+            var stcont = document.getElementById('stcont');
+            window.addEventListener("resize", Resize);
+            var pr, prm, prm2, prm3vr;
+            var st, stm, stm2, stvr;
+            var bl, blm, blm2, blvr;
+            var v, v2;
+            var stdop;
+
+            function Resize() {
+                cof = innerWidth/innerHeight;
+                if (cof > 1) {cof2 = 2.1; v = 2; v2 = 135; $('.bubdiv2').css('font-size', "1.18vw"); $('.bubdiv3').css('font-size', "1.18vw");} else {cof2 = 5; v = 5; v2 = 60; $('.bubdiv3').css('font-size', "2.4vw"); $('.bubdiv2').css('font-size', "2.4vh");}
+                pr = 100 + 40 * cof2 / cof;
+                prm = pr - 100;
+                prm2 = 0;
+
+                st = stcont.offsetHeight / 955 * 1920;
+                stm = st - innerWidth;
+                stm2 = 0;
+                if (cof > 1) {stvr = 1 / cof * 106;} else {stvr = 1 / cof * 65;}
+
+                bl = innerHeight * 4.4;
+                blm = bl - innerWidth;
+                blm2 = 0;
+                if (cof > 1) {blvr = 1 / cof * 800;} else {blvr = 1 / cof * 180;}
+
+			    $('#img1').width(pr + "%");
+			    $('#stcont').width(st + "px");
+			    if (cof > 1) {$('#bubcont').width(bl * 1.05 + "px");} else {$('#bubcont').width(bl + "px");}
+
+			    $('#img1').css('left', "0%");
+			    if (cof > 1) {stdop = 240;} else {stdop = 640;}
+			    $('#stcont').css('left', stdop + "px");
+			    $('#bubcont').css('left', "0px");
+            }
+
+			function butr() {
+			    if (prm2 < prm  - prm/4) {var t = setInterval(move1, 1000/v2);}
+			    if (prm2 >= prm  - prm/4 & prm2 < prm) {var t = setInterval(move1, 1000/46);}
+			    prm3vr = prm2 + prm/v;
+			    function move1() {
+                    if (prm2 < prm3vr & prm2 < prm){
+                        prm2 += prm/190;
+                        $("#img1").css('left', - prm2 + "%");
+                        stm2 += stm/stvr;
+                        $("#stcont").css('left', - stm2 + stdop + "px");
+                        blm2 += blm/blvr;
+                        $("#bubcont").css('left', - blm2 + "px");
+                    }
+                    else {clearInterval(t);}
+			    }
+			}
+			function butl() {
+			    if (prm2 > prm/4) {var t = setInterval(move1, 1000/v2);}
+			    if (prm2 <= prm/4 & prm2 > 0) {var t = setInterval(move1, 1000/46);}
+			    prm3vr = prm2 - prm/v;
+			    function move1() {
+                    if (prm2 > prm3vr & prm2 > 0) {
+                        prm2 -= prm/190;
+                        $("#img1").css('left', - prm2 + "%");
+                        stm2 -= stm/stvr;
+                        $("#stcont").css('left', - stm2 + stdop + "px");
+                        blm2 -= blm/blvr;
+                        $("#bubcont").css('left', - blm2 + "px");
+                    }
+                    else {clearInterval(t);}
+			    }
+			}
+
+			Resize();
+        </script>
+    </body>
+
+
+
+
+
+
+
+
+</html>
